@@ -4,13 +4,13 @@
     <joint name="camera_joint" type="fixed">
         <parent link="chassis_link"/>
         <child link="camera_link"/>
-        <origin xyz="0.305 0 0.08" rpy="0 0 0"/>
+        <origin xyz="0.18415 0 0.1095375" rpy="0 0 0"/>
     </joint>
 
     <link name="camera_link">
         <visual>
             <geometry>
-                <box size="0.010 0.03 0.03"/>                
+                <box size="0.01905 0.0889 0.028575"/>                
             </geometry>
             <material name="red"/>
         </visual>

@@ -4,22 +4,22 @@
     <joint name="laser_joint" type="fixed">
         <parent link="chassis_link"/>
         <child link="laser_frame"/>
-        <origin xyz="0.1 0 0.175" rpy="0 0 0"/>
+        <origin xyz="0.127 0 0.12025" rpy="0 0 0"/>
     </joint>
 
     <link name="laser_frame">
         <visual>
             <geometry>
-                <cylinder radius="0.05" length="0.04"/>                
+                <cylinder radius="0.034925" length="0.05"/>                
             </geometry>
             <material name="red"/>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.05" length="0.04"/>                
+                <cylinder radius="0.034925" length="0.05"/>                
             </geometry>
         </collision>
-        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+        <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.034925">
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
@@ -28,7 +28,7 @@
         <material>Gazebo/Red</material>
         <sensor name="laser" type="ray">
             <pose> 0 0 0 0 0 0 </pose>
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <update_rate>10</update_rate>
             <ray>
                 <scan>
